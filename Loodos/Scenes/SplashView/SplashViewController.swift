@@ -19,7 +19,7 @@ class SplashViewController: UIViewController {
   // MARK: LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    viewModel.delegete = self
+    viewModel.delegate = self
     viewModel.fetchText()
   }
     
@@ -47,6 +47,7 @@ class SplashViewController: UIViewController {
   
   // MARK: Actions
   @objc func fireTimer() {
+    navigationController?.show(MainViewController(), sender: nil)
   }
     
 }

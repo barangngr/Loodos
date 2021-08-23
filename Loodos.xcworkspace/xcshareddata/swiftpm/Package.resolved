@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "CaseSPM",
+        "repositoryURL": "https://github.com/barangngr/CaseSPM.git",
+        "state": {
+          "branch": "main",
+          "revision": "351390b7c478ff56961f45346285fba46d75115f",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

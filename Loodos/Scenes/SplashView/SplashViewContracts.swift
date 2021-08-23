@@ -9,7 +9,6 @@ import Foundation
 
 enum ViewModelOutput {
   case updateSplashText(_ text: String)
-//  case showMainViewController
 }
 
 protocol SplashViewModelDelegete: AnyObject {

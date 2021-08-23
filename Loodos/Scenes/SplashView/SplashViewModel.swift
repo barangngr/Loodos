@@ -12,7 +12,7 @@ class SplashViewModel {
   
   // MARK: Properties
   private var remoteConfig = RemoteConfig.remoteConfig()
-  weak var delegete: SplashViewModelDelegete?
+  weak var delegate: SplashViewModelDelegete?
   
   // MARK: Functions
   func fetchText() {
@@ -30,7 +30,7 @@ class SplashViewModel {
       guard error == nil else { return }
       remoteConfig.activate()
       let remoteText = remoteConfig.configValue(forKey: "splashText").stringValue ?? ""
-      delegete?.handleOutput(.updateSplashText(remoteText))
+      delegate?.handleOutput(.updateSplashText(remoteText))
     }
   }
  

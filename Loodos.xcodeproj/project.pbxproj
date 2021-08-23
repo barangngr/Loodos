@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,15 @@
 		958E1A7F26D3DE3E006C2C54 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A7E26D3DE3E006C2C54 /* SplashViewModel.swift */; };
 		958E1A8126D3DEB8006C2C54 /* SplashViewContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A8026D3DEB8006C2C54 /* SplashViewContracts.swift */; };
 		958E1A8626D3E224006C2C54 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A8526D3E224006C2C54 /* MainViewController.swift */; };
+		958E1A8926D3E7CC006C2C54 /* CaseSPM in Frameworks */ = {isa = PBXBuildFile; productRef = 958E1A8826D3E7CC006C2C54 /* CaseSPM */; };
+		958E1A8B26D3EAA7006C2C54 /* UINavigationBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A8A26D3EAA7006C2C54 /* UINavigationBar+Extensions.swift */; };
+		958E1A8D26D3EF83006C2C54 /* LoadingViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A8C26D3EF83006C2C54 /* LoadingViewPresentable.swift */; };
+		958E1A8F26D4027C006C2C54 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A8E26D4027C006C2C54 /* MainViewModel.swift */; };
+		958E1A9126D409DE006C2C54 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A9026D409DE006C2C54 /* GeneralResponse.swift */; };
+		958E1A9326D419F3006C2C54 /* ListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A9226D419F3006C2C54 /* ListResponseModel.swift */; };
+		958E1A9526D41A0C006C2C54 /* DetailResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A9426D41A0C006C2C54 /* DetailResponseModel.swift */; };
+		958E1A9726D41B29006C2C54 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A9626D41B29006C2C54 /* API.swift */; };
+		958E1A9A26D41BBC006C2C54 /* MainViewContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A9926D41BBC006C2C54 /* MainViewContracts.swift */; };
 		AD7B8010CAE1AC144E5DF834 /* Pods_Loodos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C3AB4D96610A06A1D94D03 /* Pods_Loodos.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +51,14 @@
 		958E1A7E26D3DE3E006C2C54 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		958E1A8026D3DEB8006C2C54 /* SplashViewContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewContracts.swift; sourceTree = "<group>"; };
 		958E1A8526D3E224006C2C54 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		958E1A8A26D3EAA7006C2C54 /* UINavigationBar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extensions.swift"; sourceTree = "<group>"; };
+		958E1A8C26D3EF83006C2C54 /* LoadingViewPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewPresentable.swift; sourceTree = "<group>"; };
+		958E1A8E26D4027C006C2C54 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		958E1A9026D409DE006C2C54 /* GeneralResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		958E1A9226D419F3006C2C54 /* ListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListResponseModel.swift; sourceTree = "<group>"; };
+		958E1A9426D41A0C006C2C54 /* DetailResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailResponseModel.swift; sourceTree = "<group>"; };
+		958E1A9626D41B29006C2C54 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		958E1A9926D41BBC006C2C54 /* MainViewContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewContracts.swift; sourceTree = "<group>"; };
 		95C3AB4D96610A06A1D94D03 /* Pods_Loodos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loodos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D491E364A8A0BA8C0971461 /* Pods-Loodos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loodos.release.xcconfig"; path = "Target Support Files/Pods-Loodos/Pods-Loodos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -52,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7B8010CAE1AC144E5DF834 /* Pods_Loodos.framework in Frameworks */,
+				958E1A8926D3E7CC006C2C54 /* CaseSPM in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +122,7 @@
 				958E1A6C26D3A89C006C2C54 /* Abstract Classes */,
 				958E1A8226D3E1B6006C2C54 /* Scenes */,
 				958E1A6926D3A857006C2C54 /* Models */,
+				958E1A9826D41B65006C2C54 /* Protocols */,
 				958E1A7D26D3DC44006C2C54 /* Utils */,
 				958E1A6B26D3A873006C2C54 /* Extensions */,
 			);
@@ -123,6 +142,9 @@
 		958E1A6926D3A857006C2C54 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				958E1A9026D409DE006C2C54 /* GeneralResponse.swift */,
+				958E1A9226D419F3006C2C54 /* ListResponseModel.swift */,
+				958E1A9426D41A0C006C2C54 /* DetailResponseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,6 +154,7 @@
 			children = (
 				958E1A7926D3B967006C2C54 /* UIColor+Extensions.swift */,
 				958E1A6F26D3AC3D006C2C54 /* UIViewController+Extensions.swift */,
+				958E1A8A26D3EAA7006C2C54 /* UINavigationBar+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -148,6 +171,7 @@
 			children = (
 				958E1A7726D3B555006C2C54 /* GeneralError.swift */,
 				958E1A7526D3B406006C2C54 /* NetworkManager.swift */,
+				958E1A9626D41B29006C2C54 /* API.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -174,9 +198,19 @@
 		958E1A8426D3E1F4006C2C54 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
+				958E1A9926D41BBC006C2C54 /* MainViewContracts.swift */,
 				958E1A8526D3E224006C2C54 /* MainViewController.swift */,
+				958E1A8E26D4027C006C2C54 /* MainViewModel.swift */,
 			);
 			path = MainView;
+			sourceTree = "<group>";
+		};
+		958E1A9826D41B65006C2C54 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				958E1A8C26D3EF83006C2C54 /* LoadingViewPresentable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +231,9 @@
 			dependencies = (
 			);
 			name = Loodos;
+			packageProductDependencies = (
+				958E1A8826D3E7CC006C2C54 /* CaseSPM */,
+			);
 			productName = Loodos;
 			productReference = 958E1A5026D3A4E3006C2C54 /* Loodos.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +261,9 @@
 				Base,
 			);
 			mainGroup = 958E1A4726D3A4E3006C2C54;
+			packageReferences = (
+				958E1A8726D3E7CC006C2C54 /* XCRemoteSwiftPackageReference "CaseSPM" */,
+			);
 			productRefGroup = 958E1A5126D3A4E3006C2C54 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -295,14 +335,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				958E1A5826D3A4E3006C2C54 /* SplashViewController.swift in Sources */,
+				958E1A9126D409DE006C2C54 /* GeneralResponse.swift in Sources */,
 				958E1A5426D3A4E3006C2C54 /* AppDelegate.swift in Sources */,
 				958E1A7A26D3B967006C2C54 /* UIColor+Extensions.swift in Sources */,
 				958E1A7626D3B406006C2C54 /* NetworkManager.swift in Sources */,
+				958E1A8D26D3EF83006C2C54 /* LoadingViewPresentable.swift in Sources */,
+				958E1A8F26D4027C006C2C54 /* MainViewModel.swift in Sources */,
+				958E1A9A26D41BBC006C2C54 /* MainViewContracts.swift in Sources */,
+				958E1A9526D41A0C006C2C54 /* DetailResponseModel.swift in Sources */,
+				958E1A9326D419F3006C2C54 /* ListResponseModel.swift in Sources */,
 				958E1A7026D3AC3D006C2C54 /* UIViewController+Extensions.swift in Sources */,
 				958E1A7826D3B555006C2C54 /* GeneralError.swift in Sources */,
 				958E1A5626D3A4E3006C2C54 /* SceneDelegate.swift in Sources */,
+				958E1A8B26D3EAA7006C2C54 /* UINavigationBar+Extensions.swift in Sources */,
 				958E1A7F26D3DE3E006C2C54 /* SplashViewModel.swift in Sources */,
 				958E1A8126D3DEB8006C2C54 /* SplashViewContracts.swift in Sources */,
+				958E1A9726D41B29006C2C54 /* API.swift in Sources */,
 				958E1A8626D3E224006C2C54 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +555,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		958E1A8726D3E7CC006C2C54 /* XCRemoteSwiftPackageReference "CaseSPM" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/barangngr/CaseSPM.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		958E1A8826D3E7CC006C2C54 /* CaseSPM */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 958E1A8726D3E7CC006C2C54 /* XCRemoteSwiftPackageReference "CaseSPM" */;
+			productName = CaseSPM;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 958E1A4826D3A4E3006C2C54 /* Project object */;
 }
