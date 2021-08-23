@@ -18,6 +18,9 @@
 		958E1A7826D3B555006C2C54 /* GeneralError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A7726D3B555006C2C54 /* GeneralError.swift */; };
 		958E1A7A26D3B967006C2C54 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A7926D3B967006C2C54 /* UIColor+Extensions.swift */; };
 		958E1A7C26D3BD0A006C2C54 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 958E1A7B26D3BD0A006C2C54 /* GoogleService-Info.plist */; };
+		958E1A7F26D3DE3E006C2C54 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A7E26D3DE3E006C2C54 /* SplashViewModel.swift */; };
+		958E1A8126D3DEB8006C2C54 /* SplashViewContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A8026D3DEB8006C2C54 /* SplashViewContracts.swift */; };
+		958E1A8626D3E224006C2C54 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A8526D3E224006C2C54 /* MainViewController.swift */; };
 		AD7B8010CAE1AC144E5DF834 /* Pods_Loodos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C3AB4D96610A06A1D94D03 /* Pods_Loodos.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,9 @@
 		958E1A7726D3B555006C2C54 /* GeneralError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralError.swift; sourceTree = "<group>"; };
 		958E1A7926D3B967006C2C54 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		958E1A7B26D3BD0A006C2C54 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		958E1A7E26D3DE3E006C2C54 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
+		958E1A8026D3DEB8006C2C54 /* SplashViewContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewContracts.swift; sourceTree = "<group>"; };
+		958E1A8526D3E224006C2C54 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		95C3AB4D96610A06A1D94D03 /* Pods_Loodos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loodos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D491E364A8A0BA8C0971461 /* Pods-Loodos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loodos.release.xcconfig"; path = "Target Support Files/Pods-Loodos/Pods-Loodos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,9 +102,9 @@
 				958E1A5526D3A4E3006C2C54 /* SceneDelegate.swift */,
 				958E1A6726D3A824006C2C54 /* Assets */,
 				958E1A6C26D3A89C006C2C54 /* Abstract Classes */,
-				958E1A6826D3A83E006C2C54 /* ViewControllers */,
-				958E1A6A26D3A863006C2C54 /* ViewModels */,
+				958E1A8226D3E1B6006C2C54 /* Scenes */,
 				958E1A6926D3A857006C2C54 /* Models */,
+				958E1A7D26D3DC44006C2C54 /* Utils */,
 				958E1A6B26D3A873006C2C54 /* Extensions */,
 			);
 			path = Loodos;
@@ -114,26 +120,11 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		958E1A6826D3A83E006C2C54 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				958E1A5726D3A4E3006C2C54 /* SplashViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		958E1A6926D3A857006C2C54 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		958E1A6A26D3A863006C2C54 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		958E1A6B26D3A873006C2C54 /* Extensions */ = {
@@ -148,10 +139,44 @@
 		958E1A6C26D3A89C006C2C54 /* Abstract Classes */ = {
 			isa = PBXGroup;
 			children = (
-				958E1A7526D3B406006C2C54 /* NetworkManager.swift */,
-				958E1A7726D3B555006C2C54 /* GeneralError.swift */,
 			);
 			path = "Abstract Classes";
+			sourceTree = "<group>";
+		};
+		958E1A7D26D3DC44006C2C54 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				958E1A7726D3B555006C2C54 /* GeneralError.swift */,
+				958E1A7526D3B406006C2C54 /* NetworkManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		958E1A8226D3E1B6006C2C54 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				958E1A8326D3E1C9006C2C54 /* SplashView */,
+				958E1A8426D3E1F4006C2C54 /* MainView */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		958E1A8326D3E1C9006C2C54 /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				958E1A8026D3DEB8006C2C54 /* SplashViewContracts.swift */,
+				958E1A5726D3A4E3006C2C54 /* SplashViewController.swift */,
+				958E1A7E26D3DE3E006C2C54 /* SplashViewModel.swift */,
+			);
+			path = SplashView;
+			sourceTree = "<group>";
+		};
+		958E1A8426D3E1F4006C2C54 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				958E1A8526D3E224006C2C54 /* MainViewController.swift */,
+			);
+			path = MainView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +301,9 @@
 				958E1A7026D3AC3D006C2C54 /* UIViewController+Extensions.swift in Sources */,
 				958E1A7826D3B555006C2C54 /* GeneralError.swift in Sources */,
 				958E1A5626D3A4E3006C2C54 /* SceneDelegate.swift in Sources */,
+				958E1A7F26D3DE3E006C2C54 /* SplashViewModel.swift in Sources */,
+				958E1A8126D3DEB8006C2C54 /* SplashViewContracts.swift in Sources */,
+				958E1A8626D3E224006C2C54 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
