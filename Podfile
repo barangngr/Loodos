@@ -8,6 +8,7 @@ target 'Loodos' do
   # Pods for Loodos
   pod 'Moya'
   pod 'Firebase/Analytics'
+  pod 'Firebase/Messaging' 
   pod 'Firebase/RemoteConfig'
 
 

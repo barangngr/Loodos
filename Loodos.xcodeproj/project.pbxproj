@@ -59,6 +59,7 @@
 		958E1A9426D41A0C006C2C54 /* DetailResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailResponseModel.swift; sourceTree = "<group>"; };
 		958E1A9626D41B29006C2C54 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		958E1A9926D41BBC006C2C54 /* MainViewContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewContracts.swift; sourceTree = "<group>"; };
+		958E1A9B26D42158006C2C54 /* Loodos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Loodos.entitlements; sourceTree = "<group>"; };
 		95C3AB4D96610A06A1D94D03 /* Pods_Loodos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loodos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D491E364A8A0BA8C0971461 /* Pods-Loodos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loodos.release.xcconfig"; path = "Target Support Files/Pods-Loodos/Pods-Loodos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +115,7 @@
 		958E1A5226D3A4E3006C2C54 /* Loodos */ = {
 			isa = PBXGroup;
 			children = (
+				958E1A9B26D42158006C2C54 /* Loodos.entitlements */,
 				958E1A6126D3A4E6006C2C54 /* Info.plist */,
 				958E1A7B26D3BD0A006C2C54 /* GoogleService-Info.plist */,
 				958E1A5326D3A4E3006C2C54 /* AppDelegate.swift */,
@@ -499,6 +501,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Loodos/Loodos.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Loodos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -519,6 +522,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Loodos/Loodos.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Loodos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
