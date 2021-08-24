@@ -105,7 +105,9 @@ extension MainViewController: MainViewModelDelegete {
         stopAnimating()
         totalResult = Int(data.totalResults ?? "0") ?? 0
         resultLabel.text = "Total result: \(data.totalResults ?? "0")"
-        collectionView.reloadData()
+        collectionView.reloadData {
+          self.viewModel.dataSource.count == 0 ? self.collectionView.setEmptyMessage("Uppps :(") : self.collectionView.restore()
+        }
       case .failure(let error):
         showErrorController(with: error)
       }

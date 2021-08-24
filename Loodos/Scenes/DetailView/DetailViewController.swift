@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class DetailViewController: UIViewController, LoadingViewPresentable {
+class DetailViewController: UIViewController, LoadingViewPresentable, BackButtonPresentable {
   
   // MARK: Properties
   var imageView = UIImageView().with({
@@ -43,6 +43,7 @@ class DetailViewController: UIViewController, LoadingViewPresentable {
     viewModel.fetchDetails(id)
     startAnimating()
     configureViews()
+    configureBackButton()
   }
   
   // MARK: Functions

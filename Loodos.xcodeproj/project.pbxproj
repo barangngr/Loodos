@@ -13,6 +13,8 @@
 		957CCEF626D515E20006D05A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CCEF526D515E20006D05A /* DetailViewModel.swift */; };
 		957CCEF826D5164E0006D05A /* DetailViewContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CCEF726D5164E0006D05A /* DetailViewContracts.swift */; };
 		957CCEFA26D51FB90006D05A /* DetailLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CCEF926D51FB90006D05A /* DetailLabel.swift */; };
+		957CCF0026D57BD40006D05A /* BackButtonPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CCEFF26D57BD40006D05A /* BackButtonPresentable.swift */; };
+		957CCF0226D5812F0006D05A /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CCF0126D5812F0006D05A /* UICollectionView+Extensions.swift */; };
 		958E1A5426D3A4E3006C2C54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A5326D3A4E3006C2C54 /* AppDelegate.swift */; };
 		958E1A5626D3A4E3006C2C54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A5526D3A4E3006C2C54 /* SceneDelegate.swift */; };
 		958E1A5826D3A4E3006C2C54 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A5726D3A4E3006C2C54 /* SplashViewController.swift */; };
@@ -47,6 +49,8 @@
 		957CCEF526D515E20006D05A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		957CCEF726D5164E0006D05A /* DetailViewContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewContracts.swift; sourceTree = "<group>"; };
 		957CCEF926D51FB90006D05A /* DetailLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLabel.swift; sourceTree = "<group>"; };
+		957CCEFF26D57BD40006D05A /* BackButtonPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButtonPresentable.swift; sourceTree = "<group>"; };
+		957CCF0126D5812F0006D05A /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		958E1A5026D3A4E3006C2C54 /* Loodos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loodos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958E1A5326D3A4E3006C2C54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		958E1A5526D3A4E3006C2C54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 				958E1A7926D3B967006C2C54 /* UIColor+Extensions.swift */,
 				958E1A6F26D3AC3D006C2C54 /* UIViewController+Extensions.swift */,
 				958E1A8A26D3EAA7006C2C54 /* UINavigationBar+Extensions.swift */,
+				957CCF0126D5812F0006D05A /* UICollectionView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				958E1A8C26D3EF83006C2C54 /* LoadingViewPresentable.swift */,
+				957CCEFF26D57BD40006D05A /* BackButtonPresentable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -380,6 +386,7 @@
 				957CCEFA26D51FB90006D05A /* DetailLabel.swift in Sources */,
 				958E1A8F26D4027C006C2C54 /* MainViewModel.swift in Sources */,
 				957CCEF026D508D10006D05A /* MainCollectionViewCell.swift in Sources */,
+				957CCF0226D5812F0006D05A /* UICollectionView+Extensions.swift in Sources */,
 				957CCEF626D515E20006D05A /* DetailViewModel.swift in Sources */,
 				958E1A9A26D41BBC006C2C54 /* MainViewContracts.swift in Sources */,
 				958E1A9526D41A0C006C2C54 /* DetailResponseModel.swift in Sources */,
@@ -394,6 +401,7 @@
 				958E1A8126D3DEB8006C2C54 /* SplashViewContracts.swift in Sources */,
 				958E1A9726D41B29006C2C54 /* API.swift in Sources */,
 				958E1A8626D3E224006C2C54 /* MainViewController.swift in Sources */,
+				957CCF0026D57BD40006D05A /* BackButtonPresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
