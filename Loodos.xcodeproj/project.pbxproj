@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		957CCEEE26D508AD0006D05A /* BaseUICollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CCEED26D508AD0006D05A /* BaseUICollectionViewCell.swift */; };
 		957CCEF026D508D10006D05A /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CCEEF26D508D10006D05A /* MainCollectionViewCell.swift */; };
+		957CCEF426D5152B0006D05A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CCEF326D5152B0006D05A /* DetailViewController.swift */; };
+		957CCEF626D515E20006D05A /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CCEF526D515E20006D05A /* DetailViewModel.swift */; };
+		957CCEF826D5164E0006D05A /* DetailViewContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CCEF726D5164E0006D05A /* DetailViewContracts.swift */; };
+		957CCEFA26D51FB90006D05A /* DetailLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957CCEF926D51FB90006D05A /* DetailLabel.swift */; };
 		958E1A5426D3A4E3006C2C54 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A5326D3A4E3006C2C54 /* AppDelegate.swift */; };
 		958E1A5626D3A4E3006C2C54 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A5526D3A4E3006C2C54 /* SceneDelegate.swift */; };
 		958E1A5826D3A4E3006C2C54 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A5726D3A4E3006C2C54 /* SplashViewController.swift */; };
@@ -39,6 +43,10 @@
 		62CB7FAF3C2220E01F1C97F5 /* Pods-Loodos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loodos.debug.xcconfig"; path = "Target Support Files/Pods-Loodos/Pods-Loodos.debug.xcconfig"; sourceTree = "<group>"; };
 		957CCEED26D508AD0006D05A /* BaseUICollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUICollectionViewCell.swift; sourceTree = "<group>"; };
 		957CCEEF26D508D10006D05A /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
+		957CCEF326D5152B0006D05A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		957CCEF526D515E20006D05A /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		957CCEF726D5164E0006D05A /* DetailViewContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewContracts.swift; sourceTree = "<group>"; };
+		957CCEF926D51FB90006D05A /* DetailLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailLabel.swift; sourceTree = "<group>"; };
 		958E1A5026D3A4E3006C2C54 /* Loodos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Loodos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		958E1A5326D3A4E3006C2C54 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		958E1A5526D3A4E3006C2C54 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +106,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		957CCEF126D514F50006D05A /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				957CCEF726D5164E0006D05A /* DetailViewContracts.swift */,
+				957CCEF326D5152B0006D05A /* DetailViewController.swift */,
+				957CCEF526D515E20006D05A /* DetailViewModel.swift */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
+		957CCEF226D5150A0006D05A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				957CCEEF26D508D10006D05A /* MainCollectionViewCell.swift */,
+				957CCEF926D51FB90006D05A /* DetailLabel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		958E1A4726D3A4E3006C2C54 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +154,7 @@
 				958E1A6726D3A824006C2C54 /* Assets */,
 				958E1A6C26D3A89C006C2C54 /* Abstract Classes */,
 				958E1A8226D3E1B6006C2C54 /* Scenes */,
+				957CCEF226D5150A0006D05A /* Views */,
 				958E1A6926D3A857006C2C54 /* Models */,
 				958E1A9826D41B65006C2C54 /* Protocols */,
 				958E1A7D26D3DC44006C2C54 /* Utils */,
@@ -188,6 +216,7 @@
 			children = (
 				958E1A8326D3E1C9006C2C54 /* SplashView */,
 				958E1A8426D3E1F4006C2C54 /* MainView */,
+				957CCEF126D514F50006D05A /* DetailView */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -208,7 +237,6 @@
 				958E1A9926D41BBC006C2C54 /* MainViewContracts.swift */,
 				958E1A8526D3E224006C2C54 /* MainViewController.swift */,
 				958E1A8E26D4027C006C2C54 /* MainViewModel.swift */,
-				957CCEEF26D508D10006D05A /* MainCollectionViewCell.swift */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -348,11 +376,15 @@
 				958E1A7A26D3B967006C2C54 /* UIColor+Extensions.swift in Sources */,
 				958E1A7626D3B406006C2C54 /* NetworkManager.swift in Sources */,
 				958E1A8D26D3EF83006C2C54 /* LoadingViewPresentable.swift in Sources */,
+				957CCEF426D5152B0006D05A /* DetailViewController.swift in Sources */,
+				957CCEFA26D51FB90006D05A /* DetailLabel.swift in Sources */,
 				958E1A8F26D4027C006C2C54 /* MainViewModel.swift in Sources */,
 				957CCEF026D508D10006D05A /* MainCollectionViewCell.swift in Sources */,
+				957CCEF626D515E20006D05A /* DetailViewModel.swift in Sources */,
 				958E1A9A26D41BBC006C2C54 /* MainViewContracts.swift in Sources */,
 				958E1A9526D41A0C006C2C54 /* DetailResponseModel.swift in Sources */,
 				958E1A9326D419F3006C2C54 /* ListResponseModel.swift in Sources */,
+				957CCEF826D5164E0006D05A /* DetailViewContracts.swift in Sources */,
 				958E1A7026D3AC3D006C2C54 /* UIViewController+Extensions.swift in Sources */,
 				958E1A7826D3B555006C2C54 /* GeneralError.swift in Sources */,
 				958E1A5626D3A4E3006C2C54 /* SceneDelegate.swift in Sources */,

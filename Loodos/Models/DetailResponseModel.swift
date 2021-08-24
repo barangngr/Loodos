@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class DetailResponseModel: Codable{
+public class DetailResponseModel: Codable {
   public var Title: String?
   public var Released: String?
   public var Runtime: String?

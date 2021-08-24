@@ -133,8 +133,10 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     //        .id: .value(cell.model?.id ?? ""),
     //        .title: .value(cell.model?.title ?? "")
     //      ], services: .firebase, .amplitude)
-    //      let destination =  ChallengeDetailsViewController(id: cell.model?.id, ref: .categoryDetail)
-    //      navigationController?.show(destination, sender: self)
+
+    let targetController = DetailViewController()
+    targetController.id = viewModel.dataSource[indexPath.item].imdbID
+    navigationController?.show(targetController, sender: nil)
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
