@@ -8,7 +8,7 @@
 import Foundation
 
 enum MainModelOutput {
-  case didFetchList(_ result: Result<Void, Error>)
+  case didFetchList(_ result: Result<SearchResponseModel, Error>)
 }
 
 protocol MainViewModelDelegete: AnyObject {

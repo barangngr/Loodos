@@ -15,7 +15,7 @@ extension LoadingViewPresentable where Self: UIViewController {
   func startAnimating() {
     let loadingIndicator = UIActivityIndicatorView()
     loadingIndicator.backgroundColor = .clear
-    loadingIndicator.color = .red
+    loadingIndicator.color = .americanRed
     loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
     loadingIndicator.tag = 912
     loadingIndicator.layer.zPosition = 99

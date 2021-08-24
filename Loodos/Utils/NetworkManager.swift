@@ -24,12 +24,12 @@ class NetworkManager {
   
   func request<T: Codable>(_ target: TargetType,
                            type: T.Type,
-                           completion:  @escaping ((Result<GeneralResponse<T>, Error>) -> Void)) {
+                           completion:  @escaping ((Result<T, Error>) -> Void)) {
     provider.request(MultiTarget(target)) { (result) in
       switch result {
       case .success(let response):
         do {
-          let response = try JSONDecoder().decode(GeneralResponse<T>.self, from: response.data)
+          let response = try JSONDecoder().decode(T.self, from: response.data)
           completion(.success(response))
         } catch {
           completion(.failure(GeneralError.parseError))
