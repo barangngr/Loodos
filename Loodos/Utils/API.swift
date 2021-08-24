@@ -8,7 +8,7 @@
 import Moya
 
 enum API {
-  case getSearch(title: String)
+  case getSearch(title: String, page: String)
   case getDetail(id: String)
 }
 
@@ -43,8 +43,8 @@ extension API: TargetType {
   
   var task: Task {
     switch self {
-    case .getSearch(let title):
-      return .requestParameters(parameters: ["apikey" : apikey, "s" : title], encoding: URLEncoding.queryString)
+    case .getSearch(let title, let page):
+      return .requestParameters(parameters: ["apikey" : apikey, "s" : title, "page": page], encoding: URLEncoding.queryString)
     case .getDetail(let id):
       return .requestParameters(parameters: ["apikey" : apikey, "i" : id, "plot" : "full"], encoding: URLEncoding.queryString)
     }

@@ -16,6 +16,8 @@ class MainViewController: UIViewController, LoadingViewPresentable {
     $0.tintColor = .americanRed
     $0.barTintColor = .darkJungleGreen
     $0.sizeToFit()
+    let textFieldInsideUISearchBar = $0.value(forKey: "searchField") as? UITextField
+    textFieldInsideUISearchBar?.textColor = UIColor.americanRed
   })
   
   private var resultLabel = UILabel().with({
@@ -39,19 +41,18 @@ class MainViewController: UIViewController, LoadingViewPresentable {
   }()
   
   private lazy var viewModel = MainViewModel()
+  private var totalResult: Int = 0
   
   // MARK: LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .charlestonGreen
-    configure()
+    configureViews()
+    fetchData()
     viewModel.delegate = self
     searchBar.delegate = self
     collectionView.delegate = self
     collectionView.dataSource = self
-    startAnimating()
-    let textFieldInsideUISearchBar = searchBar.value(forKey: "searchField") as? UITextField
-    textFieldInsideUISearchBar?.textColor = UIColor.americanRed
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -59,12 +60,8 @@ class MainViewController: UIViewController, LoadingViewPresentable {
     configureNavigationBar()
   }
   
-  override func viewDidAppear(_ animated: Bool) {
-    viewModel.fetchMovies()
-  }
-  
   // MARK: Functions
-  private func configure() {
+  private func configureViews() {
     view.addSubview(views: searchBar, resultLabel, collectionView)
     searchBar.fill(.horizontally)
     resultLabel.fill(.horizontally, with: 10)
@@ -87,6 +84,14 @@ class MainViewController: UIViewController, LoadingViewPresentable {
     navigationController?.navigationBar.setTitleFont(UIFont(name: "HelveticaNeue-Bold", size: 23)!, color: .verdigris)
   }
   
+  private func fetchData() {
+    // Yanlış anlamadıysam Case notlarında istenen loading animasyonunun gösterilmesi için bu kısmı ekledim.
+    startAnimating()
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+      self.viewModel.fetchMovies("")
+    }
+  }
+  
 }
 
 // MARK: - Extension
@@ -98,7 +103,8 @@ extension MainViewController: MainViewModelDelegete {
       switch result {
       case .success(let data):
         stopAnimating()
-        resultLabel.text = data.totalResults
+        totalResult = Int(data.totalResults ?? "0") ?? 0
+        resultLabel.text = "Total result: \(data.totalResults ?? "0")"
         collectionView.reloadData()
       case .failure(let error):
         showErrorController(with: error)
@@ -110,7 +116,7 @@ extension MainViewController: MainViewModelDelegete {
 
 extension MainViewController: UISearchBarDelegate {
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-    print(searchText)
+    viewModel.fetchMovies(searchText)
   }
 }
 
@@ -144,13 +150,13 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     return CGSize(width: width, height: 180)
   }
   
-  func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-    //    guard indexPath.item == presenter.dataSource.count - 1 else { return }
-    //    if let path = path {
-    //      presenter.getDataSource(with: path)
-    //    } else if let categoryId = categoryId {
-    //      presenter.getDataSource(categoryId: categoryId)
-    //    }
+  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    let endScrolling = (scrollView.contentOffset.y + scrollView.frame.size.height)
+    let id = (viewModel.dataSource.count / 10 ) + 1
+    let shouldPagination = viewModel.dataSource.count < totalResult
+    if endScrolling >= scrollView.contentSize.height && endScrolling >= scrollView.frame.size.height && shouldPagination {
+      viewModel.fetchMovies(searchBar.text ?? "", page: "\(id)")
+    }
   }
   
 }

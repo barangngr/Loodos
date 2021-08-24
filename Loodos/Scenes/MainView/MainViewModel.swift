@@ -12,8 +12,9 @@ class MainViewModel {
   var dataSource: [ListResponseModel] = []
   weak var delegate: MainViewModelDelegete?
   
-  func fetchMovies() {
-    NetworkManager.shared.request(API.getSearch(title: "Dark"), type: SearchResponseModel.self) { [weak self] (result) in
+  func fetchMovies(_ title: String, page: String = "1") {
+    cleanDataSoruce(page)
+    NetworkManager.shared.request(API.getSearch(title: title, page: page), type: SearchResponseModel.self) { [weak self] (result) in
       guard let self = self else { return }
       switch result {
       case .success(let data):
@@ -27,14 +28,10 @@ class MainViewModel {
     }
   }
   
-//  func fetchDetails() {
-//    NetworkManager.shared.request(API.getDetail(id: "tt0468569"), type: DetailResponseModel.self) { [weak self] (result) in
-//      switch result {
-//      case .success(let data):
-//        print(data)
-//      case .failure(let error):
-//        print(error.localizedDescription)
-//      }
-//    }
-//  }
+  private func cleanDataSoruce(_ page: String) {
+    if page == "1" {
+      dataSource.removeAll()
+    }
+  }
+  
 }
