@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import Kingfisher
+import Kingfisher
 
 class MainCollectionViewCell: BaseUICollectionViewCell {
   
@@ -53,7 +53,7 @@ class MainCollectionViewCell: BaseUICollectionViewCell {
   func configure(with model: ListResponseModel?) {
     titleLabel.text = model?.Title
     yearLabel.text = model?.Year
-//    imageView.setImage(url: model.Poster)
+    imageView.kf.setImage(with: URL(string: model?.Poster ?? ""))
   }
   
 }

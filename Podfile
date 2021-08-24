@@ -10,6 +10,6 @@ target 'Loodos' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Messaging' 
   pod 'Firebase/RemoteConfig'
-
+  pod 'Kingfisher'
 
 end

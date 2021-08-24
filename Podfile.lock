@@ -83,6 +83,7 @@ PODS:
     - GoogleUtilities/Logger
   - GoogleUtilities/UserDefaults (7.2.2):
     - GoogleUtilities/Logger
+  - Kingfisher (6.1.1)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
@@ -98,6 +99,7 @@ DEPENDENCIES:
   - Firebase/Analytics
   - Firebase/Messaging
   - Firebase/RemoteConfig
+  - Kingfisher
   - Moya
 
 SPEC REPOS:
@@ -115,6 +117,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
+    - Kingfisher
     - Moya
     - nanopb
     - PromisesObjC
@@ -133,10 +136,11 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 0c3b134b2c0a90c4c24833873894bfe0e42a0384
   GoogleDataTransport: 1024b1a4dfbd7a0e92cb20d7e0a6f1fb66b449a4
   GoogleUtilities: 31c5b01f978a70c6cff2afc6272b3f1921614b43
+  Kingfisher: 676d63307fbef6ed5d5ed400bff36983480d7500
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
 
-PODFILE CHECKSUM: 8b9c3310520623b24b64365482bc11f3a56e5861
+PODFILE CHECKSUM: 0bbe04c09e2fd5a41e411d5acfd052adceef8e21
 
 COCOAPODS: 1.10.1
