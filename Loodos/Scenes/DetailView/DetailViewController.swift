@@ -45,6 +45,11 @@ class DetailViewController: BaseUIViewController, LoadingViewPresentable, BackBu
     configureBackButton()
   }
   
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    AnalyticEvents.viewScreen.logEvent(["id" : "detail_view"])
+  }
+  
   // MARK: Functions
   override func configureViews() {
     view.addSubview(views: imageView, titleLabel, genreLabel, runtimeLabel, directorLabel, imdbLabel)

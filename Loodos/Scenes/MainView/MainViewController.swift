@@ -57,6 +57,7 @@ class MainViewController: BaseUIViewController, LoadingViewPresentable {
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     configureNavigationBar()
+    AnalyticEvents.viewScreen.logEvent(["id" : "main_view"])
   }
   
   // MARK: Functions

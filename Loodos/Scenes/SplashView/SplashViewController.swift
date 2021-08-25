@@ -27,14 +27,11 @@ class SplashViewController: UIViewController {
     super.viewDidAppear(animated)
     checkNetwork()
   }
-  
-  deinit {
-    print("SplashViewController deinit")
-  }
-  
+    
   // MARK: Functions
   private func checkNetwork() {
-    NetworkManager.shared.checkNetworkConnection { error in
+    NetworkManager.shared.checkNetworkConnection { [weak self] error in
+      guard let self = self else { return }
       if let err = error {
         self.showErrorController(with: err)
       }

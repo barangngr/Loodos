@@ -39,6 +39,7 @@
 		958E1A9726D41B29006C2C54 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A9626D41B29006C2C54 /* API.swift */; };
 		958E1A9A26D41BBC006C2C54 /* MainViewContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E1A9926D41BBC006C2C54 /* MainViewContracts.swift */; };
 		95B1E34726D67B9A00B7526E /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1E34626D67B9A00B7526E /* BaseUIViewController.swift */; };
+		95B1E34926D695EA00B7526E /* AnalyticEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B1E34826D695EA00B7526E /* AnalyticEvents.swift */; };
 		AD7B8010CAE1AC144E5DF834 /* Pods_Loodos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C3AB4D96610A06A1D94D03 /* Pods_Loodos.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		958E1A9926D41BBC006C2C54 /* MainViewContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewContracts.swift; sourceTree = "<group>"; };
 		958E1A9B26D42158006C2C54 /* Loodos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Loodos.entitlements; sourceTree = "<group>"; };
 		95B1E34626D67B9A00B7526E /* BaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
+		95B1E34826D695EA00B7526E /* AnalyticEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticEvents.swift; sourceTree = "<group>"; };
 		95C3AB4D96610A06A1D94D03 /* Pods_Loodos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Loodos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D491E364A8A0BA8C0971461 /* Pods-Loodos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Loodos.release.xcconfig"; path = "Target Support Files/Pods-Loodos/Pods-Loodos.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -215,6 +217,7 @@
 				958E1A7726D3B555006C2C54 /* GeneralError.swift */,
 				958E1A7526D3B406006C2C54 /* NetworkManager.swift */,
 				958E1A9626D41B29006C2C54 /* API.swift */,
+				95B1E34826D695EA00B7526E /* AnalyticEvents.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				958E1A9326D419F3006C2C54 /* ListResponseModel.swift in Sources */,
 				95B1E34726D67B9A00B7526E /* BaseUIViewController.swift in Sources */,
 				957CCEF826D5164E0006D05A /* DetailViewContracts.swift in Sources */,
+				95B1E34926D695EA00B7526E /* AnalyticEvents.swift in Sources */,
 				958E1A7026D3AC3D006C2C54 /* UIViewController+Extensions.swift in Sources */,
 				958E1A7826D3B555006C2C54 /* GeneralError.swift in Sources */,
 				958E1A5626D3A4E3006C2C54 /* SceneDelegate.swift in Sources */,
@@ -555,6 +559,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Loodos/Loodos.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ZFV3R8473;
 				INFOPLIST_FILE = Loodos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -576,6 +581,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Loodos/Loodos.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8ZFV3R8473;
 				INFOPLIST_FILE = Loodos/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
