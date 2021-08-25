@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController, LoadingViewPresentable {
+class MainViewController: BaseUIViewController, LoadingViewPresentable {
   
   // MARK: Properties
   private var searchBar = UISearchBar().with({
@@ -47,7 +47,6 @@ class MainViewController: UIViewController, LoadingViewPresentable {
   override func viewDidLoad() {
     super.viewDidLoad()
     view.backgroundColor = .charlestonGreen
-    configureViews()
     fetchData()
     viewModel.delegate = self
     searchBar.delegate = self
@@ -61,7 +60,7 @@ class MainViewController: UIViewController, LoadingViewPresentable {
   }
   
   // MARK: Functions
-  private func configureViews() {
+  override func configureViews() {
     view.addSubview(views: searchBar, resultLabel, collectionView)
     searchBar.fill(.horizontally)
     resultLabel.fill(.horizontally, with: 10)
@@ -127,7 +126,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     return viewModel.dataSource.count
   }
   
-  
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withClass: MainCollectionViewCell.self, for: indexPath)
     cell.configure(with: viewModel.dataSource[indexPath.item])
@@ -159,6 +157,10 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     if endScrolling >= scrollView.contentSize.height && endScrolling >= scrollView.frame.size.height && shouldPagination {
       viewModel.fetchMovies(searchBar.text ?? "", page: "\(id)")
     }
+  }
+
+  func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    searchBar.resignFirstResponder()
   }
   
 }

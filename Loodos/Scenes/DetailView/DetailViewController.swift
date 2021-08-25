@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class DetailViewController: UIViewController, LoadingViewPresentable, BackButtonPresentable {
+class DetailViewController: BaseUIViewController, LoadingViewPresentable, BackButtonPresentable {
   
   // MARK: Properties
   var imageView = UIImageView().with({
@@ -42,12 +42,11 @@ class DetailViewController: UIViewController, LoadingViewPresentable, BackButton
     viewModel.delegate = self
     viewModel.fetchDetails(id)
     startAnimating()
-    configureViews()
     configureBackButton()
   }
   
   // MARK: Functions
-  func configureViews() {
+  override func configureViews() {
     view.addSubview(views: imageView, titleLabel, genreLabel, runtimeLabel, directorLabel, imdbLabel)
     imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 5).isActive = true
     imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15).isActive = true
