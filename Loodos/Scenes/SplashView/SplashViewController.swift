@@ -25,19 +25,10 @@ class SplashViewController: UIViewController {
     
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
-    checkNetwork()
+    viewModel.checkNetwork()
   }
     
   // MARK: Functions
-  private func checkNetwork() {
-    NetworkManager.shared.checkNetworkConnection { [weak self] error in
-      guard let self = self else { return }
-      if let err = error {
-        self.showErrorController(with: err)
-      }
-    }
-  }
-  
   private func addTimer(){
     timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(fireTimer), userInfo: nil, repeats: false)
   }
@@ -53,9 +44,11 @@ class SplashViewController: UIViewController {
 extension SplashViewController: SplashViewModelDelegete {
   func handleOutput(_ output: ViewModelOutput) {
     switch output {
-    case .updateSplashText(let text):
+    case .didFetchText(let text):
       splashLabel.text = text
       addTimer()
+    case .didCheckNetwork(let error):
+      showErrorController(with: error)
     }
   }
 }

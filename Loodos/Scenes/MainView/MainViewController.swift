@@ -134,13 +134,8 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    //    if let cell = collectionView.cellForItem(at: indexPath) as? UICollectionViewPresentable {
-    //      AnalyticsEvents.selectItem.logEvent([
-    //        .type: .selectItem(.challenge),
-    //        .id: .value(cell.model?.id ?? ""),
-    //        .title: .value(cell.model?.title ?? "")
-    //      ], services: .firebase, .amplitude)
-
+    let title = viewModel.dataSource[indexPath.item].Title ?? ""
+    AnalyticEvents.selectItem.logEvent(["select_item": title])
     let targetController = DetailViewController()
     targetController.id = viewModel.dataSource[indexPath.item].imdbID
     navigationController?.show(targetController, sender: nil)

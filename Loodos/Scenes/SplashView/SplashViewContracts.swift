@@ -8,7 +8,8 @@
 import Foundation
 
 enum ViewModelOutput {
-  case updateSplashText(_ text: String)
+  case didFetchText(_ text: String)
+  case didCheckNetwork(_ error: Error)
 }
 
 protocol SplashViewModelDelegete: AnyObject {

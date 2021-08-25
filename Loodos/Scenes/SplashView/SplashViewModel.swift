@@ -20,6 +20,15 @@ class SplashViewModel {
     fetchRemoteConfig()
   }
   
+  func checkNetwork() {
+    NetworkManager.shared.checkNetworkConnection { [weak self] error in
+      guard let self = self else { return }
+      if let err = error {
+        self.delegate?.handleOutput(.didCheckNetwork(err))
+      }
+    }
+  }
+  
   private func setupRemoteConfigDefaults() {
     let defaultValue = ["splashText": "--" as NSObject]
     remoteConfig.setDefaults(defaultValue)
@@ -30,7 +39,7 @@ class SplashViewModel {
       guard error == nil else { return }
       remoteConfig.activate()
       let remoteText = remoteConfig.configValue(forKey: "splashText").stringValue ?? ""
-      delegate?.handleOutput(.updateSplashText(remoteText))
+      delegate?.handleOutput(.didFetchText(remoteText))
     }
   }
  
